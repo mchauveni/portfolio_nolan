@@ -132,6 +132,52 @@ body {
   animation-play-state: paused !important;
 }
 
+/* Scroll to top button */
+.scrollToTop {
+  position: absolute;
+  bottom: 5rem;
+  right: 5rem;
+}
+
+.scrollToTop__outerRing {
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transition: var(--medium-transition);
+}
+
+.scrollToTop__innerCircle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  transition: var(--medium-transition);
+}
+
+.scrollToTop__arrowTop {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: var(--medium-transition);
+}
+
+.scrollToTop:hover .scrollToTop__innerCircle {
+  width: 30px;
+  height: 30px;
+}
+
+.scrollToTop:hover .scrollToTop__arrowTop {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
 
 /* Navbar */
 .navbar {
