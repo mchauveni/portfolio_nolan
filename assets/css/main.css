@@ -47,12 +47,9 @@ body {
   --dark-gray: #0D0D0D;
   --near-black: #050505;
   --pure-black: #000000;
-  /* Primary */
-  --primary-100: #041133;
-  --primary-200: #092366;
-  --primary-300: #0d3499;
-  --primary-400: #1246cc;
-  --primary-500: #1657ff;
+
+  --gray: #343434;
+  --light-gray: #BBBAD0;
 
 
   /* Transitions */
@@ -83,12 +80,19 @@ body {
   overflow-x: hidden !important;
 
   background-color: var(--dark-gray);
+  color: #FFF;
 
 }
 
 /************************
     START CUSTOM CSS
 ************************/
+
+.h2-title {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
 
 
 /* Utility */
@@ -134,7 +138,8 @@ body {
 
 /* Scroll to top button */
 .scrollToTop {
-  position: absolute;
+  cursor: pointer;
+  position: fixed;
   bottom: 5rem;
   right: 5rem;
 }
@@ -377,9 +382,11 @@ body {
   opacity: 0;
   transition: var(--fast-transition);
   transform: translate(0, 20%);
+  visibility: hidden;
 }
 
 .navbar-menu-content--active {
+  visibility: visible;
   opacity: 1;
   rotate: 0deg;
   transform: translate(0, 0);
@@ -438,50 +445,7 @@ body {
   transition: var(--fast-transition);
 }
 
-/* HERO */
 
-.hero {
-  height: 100vh;
-  color: var(--near-white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-}
-
-.hero__introtitle {
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-}
-
-.hero__titlewrapper {
-  max-width: 70%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.hero__maintitle {
-  font-size: 3rem;
-  font-weight: 600;
-}
-
-.hero__subtitle {
-  font-size: 1.25rem;
-}
-
-.scrollcta {
-  justify-self: flex-end;
-}
-
-.scrollcta__icon {
-  width: 3rem;
-  height: 3rem;
-}
 
 
 

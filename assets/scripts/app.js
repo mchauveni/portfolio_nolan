@@ -8,11 +8,8 @@ window.addEventListener("load", function () {
     const navbarMenuContent = document.querySelector(".navbar-menu-content");
 
 
-    console.log(menuButton.clientHeight)
-
     soundwaveContainer.style.height = menuButton.clientHeight + "px";
 
-    console.log(soundwaveItem)
 
     soundwaveContainer.addEventListener("click", function () {
         soundwaveItem.forEach(element => {
