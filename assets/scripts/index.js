@@ -178,6 +178,10 @@ window.addEventListener("load", function () {
         })
     })
 
+    // Competence paragraphe
+
+    
+
 
 
 })

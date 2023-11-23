@@ -174,21 +174,24 @@ body.white-mode--var{
 .competence-slash{
   position: absolute;
   transform: translate(-8px, 26px);
-  transition: var(--medium-transition);
+  background-color: var(--dark-gray);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 10;
 }
 
 .competence-title-content{
+  z-index: 9;
   padding-left: 1rem;
   position: absolute;
   transform: translate(-100%, 0);
   min-width: max-content;
   word-wrap: normal;
-  transition: var(--medium-transition);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .reset-transform{
   transform: translate(0%, 0%) !important;
-  transition: var(--medium-transition);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .reset-transform--delay{
   transform: translate(0%, 0%) !important;
@@ -262,6 +265,7 @@ body.white-mode--var{
   width: 300px;
   padding: 0 0 0.5rem 0;
   transition: var(--fast-transition);
+  resize: none;
 }
 
 .contact-form-input::placeholder {
