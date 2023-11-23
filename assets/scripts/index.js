@@ -158,7 +158,7 @@ window.addEventListener("load", function () {
                 trigger: element,
                 start: "top 30%",
                 end:"bottom 30%",
-                markers: true,
+                markers: false,
                 onEnter: () => { //Add white mode
                     body.classList.add("white-mode--var");
 
