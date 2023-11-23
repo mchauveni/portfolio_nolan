@@ -19,7 +19,7 @@ window.addEventListener("load", function () {
     })
 
 
-    menuButton.addEventListener("click", function(){
+    menuButton.addEventListener("click", function () {
         burgerSpan[0].classList.toggle("burger-span1--active");
         burgerSpan[1].classList.toggle("burger-span2--active");
 
@@ -27,5 +27,28 @@ window.addEventListener("load", function () {
     })
 
     navbarMenuContent.style.top = navbar.clientHeight + "px";
+
+    let copy = document.querySelectorAll(".copy");
+    let copy_popup = document.querySelector(".copy-popup");
+
+    copy.forEach(element => {
+        element.addEventListener("click", (e) => {
+            copy_popup.style.left = e.clientX + "px";
+            copy_popup.style.top = e.clientY + "px";
+            copy_popup.style.visibility = "visible";
+            setTimeout(() => {
+                copy_popup.style.visibility = "hidden";
+            }, 1500);
+            navigator.clipboard.writeText("nolan.luzet@gmail.com");
+        });
+    })
+
+    this.document.addEventListener('mousemove', (e) => {
+        copy_popup.style.left = e.clientX + 6 + "px";
+        copy_popup.style.top = e.clientY + 6 + "px";
+
+    })
+
+
 
 })

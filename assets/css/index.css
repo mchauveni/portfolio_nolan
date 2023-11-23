@@ -5,7 +5,19 @@ body.white-mode--var{
   --pure-black: #fff !important;
   --pure-white: #000 !important;
   --near-white: #050505 !important;
-  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.copy-popup{
+  position: fixed;
+  background-color: var(--gray-600);
+  color: var(--pure-black);
+  visibility: hidden;
+  z-index: 199000;
+  cursor: default;
+  font-size: 0.85rem;
+  padding: 2px 8px;
+  border-radius: 3px;
 }
 
 /* HERO */
@@ -192,11 +204,12 @@ body.white-mode--var{
 .reset-transform{
   transform: translate(0%, 0%) !important;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transition-delay: 0.2s;
 }
 .reset-transform--delay{
   transform: translate(0%, 0%) !important;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  transition-delay: 0.5s;
+  transition-delay: 0.7s;
 }
 
 .competence-text {
@@ -295,6 +308,20 @@ body.white-mode--var{
   transition: var(--fast-transition);
 }
 
+.contact-form-input--submit{
+  outline: none;
+  background: none;
+  color: var(--pure-white);
+  cursor: pointer;
+  transition: var(--medium-transition);
+}
+.contact-form-input--submit:hover{
+  outline: none;
+  background: none;
+  color: var(--gray-500);
+  cursor: pointer;
+}
+
 
 /* SOCIAL */
 .social-item {
@@ -374,6 +401,7 @@ body.white-mode--var{
 }
 
 .footer-link {
+  cursor: pointer;
   text-decoration: none;
   color: var(--gray-600, #D0D0D2);
 }

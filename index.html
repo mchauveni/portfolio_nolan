@@ -42,7 +42,8 @@
 </head>
 
 <body>
-    <a class="scrollToTop" href="">
+    <span class="copy-popup">Copié !</span>
+    <a class="scrollToTop" href="#">
         <div class="scrollToTop__outerRing"></div>
         <div class="scrollToTop__innerCircle">
             <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +79,7 @@
                 </div>
                 <div class="navbar-menu-content">
                     <a class="navbar-menu-link--active">Accueil <div class="navbar-menu--selector"></div></a>
-                    <a class="navbar-menu-link">compétences
+                    <a class="navbar-menu-link" href="#competence">compétences
                         <svg class="navbar-menu-link-svg" viewBox="0 0 24 25" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -113,14 +114,14 @@
                 <p class="hero__subtitle">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam
                     nihil </p>
             </div>
-            <div class="scrollcta">
+            <a href="#realisation" class="scrollcta">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="scrollcta__icon">
                     <path
                         d="M10.7929 17.707C11.1834 18.0975 11.8164 18.0975 12.2069 17.707L21.7069 8.207C22.0974 7.8165 22.0974 7.1835 21.7069 6.793C21.3164 6.4025 20.6834 6.4025 20.2929 6.793L11.4999 15.586L2.70688 6.793C2.51138 6.5975 2.25588 6.5 1.99988 6.5C1.74388 6.5 1.48838 6.5975 1.29288 6.793C0.902379 7.1835 0.902379 7.8165 1.29288 8.207L10.7929 17.707Z" />
                 </svg>
-            </div>
+            </a>
         </section>
-        <section class="section-realisation">
+        <section class="section-realisation" id="realisation">
             <h2 class="h2-title">Projets sélectionnés</h2>
             <div class="realisation-container">
                 <div class="realisation-item">
@@ -138,7 +139,7 @@
                         <div class="realisation-tag-item">UX & UI Design</div>
                         <div class="realisation-tag-item">Branding</div>
                         <div class="realisation-tag-item">Communication</div>
-                        <div class="realisation-tag-item">+1</div>
+                        <div class="realisation-tag-item">+3</div>
                     </div>
                 </div>
                 <div class="realisation-item">
@@ -147,7 +148,7 @@
                         <div class="realisation-tag-item">UX & UI Design</div>
                         <div class="realisation-tag-item">Branding</div>
                         <div class="realisation-tag-item">Communication</div>
-                        <div class="realisation-tag-item">+1</div>
+                        <div class="realisation-tag-item">+2</div>
                     </div>
                 </div>
                 <div class="realisation-item">
@@ -170,7 +171,7 @@
             </div>
         </section>
 
-        <section class="section-competence">
+        <section class="section-competence" id="competence">
             <h2 class="h2-title">Mes compétences</h2>
             <div class="competence-container">
                 <div class="competence-content-container">
@@ -180,10 +181,21 @@
                             (UI)</span>
                     </h3>
                     <p class="competence-text">
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatuDuis aute irure dolor in. <br><br>reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatuDuis aute irure.<br><br>dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatu.
+                        <span class="text-line">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatuDuis aute irure dolor in. 
+                        </span>
+                        <br><br>
+                        <span class="text-line">
+                            reprehenderit in voluptate velit esse cillum dolore eu
+                            fugiat nulla pariatuDuis aute irure. 
+                        </span>
+                        
+                        <br><br> 
+                        <span class="text-line">
+                            dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatu.
+                        </span>
                     </p>
                 </div>
                 <img src="./assets/images/placeholder/competence.png" alt="Image placeholder" class="competence-image">
@@ -285,6 +297,7 @@
                             placeholder="Bonjour, je souhaiterai..." required></textarea>
                     </div>
                 </div>
+                <input type="submit" class="h2-title contact-form-input--submit" value="Envoyer">
             </form>
         </section>
         <section class="section-social">
@@ -485,7 +498,7 @@
                     </span>
                 </div>
             </a>
-            <a href="nolan.luzet@gmail.com" target="_blank" class="social-item">Email
+            <div  class="social-item copy">Email
                 <div class="social-item--hover">
 
                     <span class="social-item-content">
@@ -599,7 +612,7 @@
                         nolan.luzet@gmail.com
                     </span>
                 </div>
-            </a>
+            </div>
             <a href="./assets/images/CVNolan.pdf" target="_blank" class="social-item">CV
                 <div class="social-item--hover">
 
@@ -732,13 +745,13 @@
             <div class="footer-right-container">
                 <a href="##" class="footer-link">Mentions légales</a>
                 <div class="footer-social-container">
-                    <a href="##" class="footer-link">
+                    <div class="footer-link copy">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M5 4C3.43 4 2.13977 5.21 2.00977 6.75L12 12.1445L21.9902 6.75C21.8602 5.21 20.57 4 19 4H5ZM2 8.44531V17C2 18.655 3.345 20 5 20H19C20.655 20 22 18.655 22 17V8.44531L12.3555 13.6602C12.2455 13.7202 12.125 13.75 12 13.75C11.875 13.75 11.7545 13.7202 11.6445 13.6602L2 8.44531Z"
                                 fill="#D0D0D2" />
                         </svg>
-                    </a>
+                    </div>
                     <a href="##" class="footer-link">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
