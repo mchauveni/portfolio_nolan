@@ -13,6 +13,28 @@ window.addEventListener("load", function () {
 
     // ANIMATION ON SCROLL
     gsap.registerPlugin(ScrollTrigger);
+    const comp_images = gsap.utils.toArray('.competence-image');
+    const comp_container = gsap.utils.toArray('.competence-container');
+
+    for (let i = 0; i < comp_container.length; i++) {
+        comp_container[i].addEventListener("mousemove", (e) => {
+            parallax(e, comp_images[i])
+        })
+        comp_container[i].addEventListener("mouseleave", (e) => {
+            reset(comp_images[i])
+        })
+    }
+
+    function reset(element) {
+        TweenMax.to(element, 0.5, { x: 0, y: 0 })
+    }
+
+    function parallax(e, element) {
+        let mousePosXRatio = (e.clientX - (window.innerWidth / 2)) * 0.075;
+        let mousePosYRatio = (e.clientY - (window.innerHeight / 2)) * 0.075;
+        TweenMax.to(element, 0.5, { x: mousePosXRatio, y: mousePosYRatio })
+    }
+
 
 
 
@@ -130,7 +152,7 @@ window.addEventListener("load", function () {
             onEnter: () => {
                 animationCompetenceSlash4.classList.add("reset-transform")
             },
-            
+
 
         },
     })
@@ -152,12 +174,12 @@ window.addEventListener("load", function () {
     const whiteMode = gsap.utils.toArray(".white-mode")
     const body = document.querySelector("body");
 
-    whiteMode.forEach(element =>{
+    whiteMode.forEach(element => {
         gsap.to(element, {
             scrollTrigger: {
                 trigger: element,
                 start: "top 30%",
-                end:"bottom 30%",
+                end: "bottom 30%",
                 markers: false,
                 onEnter: () => { //Add white mode
                     body.classList.add("white-mode--var");
@@ -165,21 +187,21 @@ window.addEventListener("load", function () {
                 },
                 onEnterBack: () => { //Add white mode
                     body.classList.add("white-mode--var");
-                
+
                 },
                 onLeave: () => { //Add dark mode
                     body.classList.remove("white-mode--var");
                 },
                 onLeaveBack: () => { //Add dark mode
                     body.classList.remove("white-mode--var");
-        
+
                 }
             }
         })
     })
 
 
-    
+
 
 
 
