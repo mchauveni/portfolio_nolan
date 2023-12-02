@@ -20,7 +20,6 @@ window.addEventListener('load', () => {
   // ANIMATION ON SCROLL
   gsap.registerPlugin(ScrollTrigger);
 
-  let characters = gsap.utils.toArray(".character-split")
 
     gsap.to(".character-split", {
       yPercent: "100%",

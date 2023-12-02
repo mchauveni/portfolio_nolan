@@ -13,6 +13,28 @@ window.addEventListener("load", function () {
 
     // ANIMATION ON SCROLL
     gsap.registerPlugin(ScrollTrigger);
+    const comp_images = gsap.utils.toArray('.competence-image');
+    const comp_container = gsap.utils.toArray('.competence-container');
+
+    for (let i = 0; i < comp_container.length; i++) {
+        comp_container[i].addEventListener("mousemove", (e) => {
+            parallax(e, comp_images[i])
+        })
+        comp_container[i].addEventListener("mouseleave", (e) => {
+            reset(comp_images[i])
+        })
+    }
+
+    function reset(element) {
+        TweenMax.to(element, 0.5, { x: 0, y: 0 })
+    }
+
+    function parallax(e, element) {
+        let mousePosXRatio = (e.clientX - (window.innerWidth / 2)) * 0.075;
+        let mousePosYRatio = (e.clientY - (window.innerHeight / 2)) * 0.075;
+        TweenMax.to(element, 0.5, { x: mousePosXRatio, y: mousePosYRatio })
+    }
+
 
 
 
