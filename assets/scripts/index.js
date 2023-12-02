@@ -11,8 +11,9 @@ window.addEventListener("load", function () {
         })
     })
 
-    // ANIMATION ON SCROLL
-    gsap.registerPlugin(ScrollTrigger);
+    /**
+     * Images parralax by their respective container
+     */
     const comp_images = gsap.utils.toArray('.competence-image');
     const comp_container = gsap.utils.toArray('.competence-container');
 
@@ -36,138 +37,46 @@ window.addEventListener("load", function () {
     }
 
 
-
+    // ANIMATION ON SCROLL
+    gsap.registerPlugin(ScrollTrigger);
 
     // Competence title
     const animationCompetenceSlash0 = document.querySelector(".gsap-competence-slash-0");
     const animationCompetenceTitleContent0 = document.querySelector(".gsap-competence-title-content-0");
 
-    gsap.to(".gsap-competence-slash-0", {
-        scrollTrigger: {
-            trigger: ".gsap-competence-title-0",
-            start: "100% 80%",
-            markers: false,
-            onEnter: () => {
-                animationCompetenceSlash0.classList.add("reset-transform")
+    const competence_slash = gsap.utils.toArray('.competence-slash');
+    const competence_title = gsap.utils.toArray('.competence-title-content');
+
+    competence_slash.forEach(slash => {
+        gsap.to(slash, {
+            scrollTrigger: {
+                trigger: slash,
+                start: "100% 80%",
+                onEnter: () => {
+                    console.log("NOW");
+                },
             },
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            transform: "translateY(0)",
+            duration: 0.5
+        })
+    });
 
-        },
-    })
-    gsap.to(".gsap-competence-title-content-0", {
-        scrollTrigger: {
-            trigger: ".gsap-competence-title-0",
-            start: "100% 80%",
-            markers: false,
-            onEnter: () => {
-                animationCompetenceTitleContent0.classList.add("reset-transform--delay")
+    competence_title.forEach(title => {
+        gsap.to(title, {
+            scrollTrigger: {
+                trigger: title,
+                start: "100% 80%",
+                onEnter: () => {
+                    console.log("NOW");
+                },
             },
-
-        },
-    })
-
-
-    const animationCompetenceSlash1 = document.querySelector(".gsap-competence-slash-1");
-    const animationCompetenceTitleContent1 = document.querySelector(".gsap-competence-title-content-1");
-    gsap.to(".gsap-competence-slash-1", {
-        scrollTrigger: {
-            trigger: ".gsap-competence-title-1",
-            start: "100% 80%",
-            markers: false,
-            onEnter: () => {
-                animationCompetenceSlash1.classList.add("reset-transform")
-            },
-
-        },
-    })
-    gsap.to(".gsap-competence-title-content-1", {
-        scrollTrigger: {
-            trigger: ".gsap-competence-title-1",
-            start: "100% 80%",
-            markers: false,
-            onEnter: () => {
-                animationCompetenceTitleContent1.classList.add("reset-transform--delay")
-            },
-
-        },
-    })
-
-    const animationCompetenceSlash2 = document.querySelector(".gsap-competence-slash-2");
-    const animationCompetenceTitleContent2 = document.querySelector(".gsap-competence-title-content-2");
-    gsap.to(".gsap-competence-slash-2", {
-        scrollTrigger: {
-            trigger: ".gsap-competence-title-2",
-            start: "100% 80%",
-            markers: false,
-            onEnter: () => {
-                animationCompetenceSlash2.classList.add("reset-transform")
-            },
-
-        },
-    })
-    gsap.to(".gsap-competence-title-content-2", {
-        scrollTrigger: {
-            trigger: ".gsap-competence-title-2",
-            start: "100% 80%",
-            markers: false,
-            onEnter: () => {
-                animationCompetenceTitleContent2.classList.add("reset-transform--delay")
-            },
-
-        },
-    })
-
-    const animationCompetenceSlash3 = document.querySelector(".gsap-competence-slash-3");
-    const animationCompetenceTitleContent3 = document.querySelector(".gsap-competence-title-content-3");
-    gsap.to(".gsap-competence-slash-3", {
-        scrollTrigger: {
-            trigger: ".gsap-competence-title-3",
-            start: "100% 80%",
-            markers: false,
-            onEnter: () => {
-                animationCompetenceSlash3.classList.add("reset-transform")
-            },
-
-        },
-    })
-    gsap.to(".gsap-competence-title-content-3", {
-        scrollTrigger: {
-            trigger: ".gsap-competence-title-3",
-            start: "100% 80%",
-            markers: false,
-            onEnter: () => {
-                animationCompetenceTitleContent3.classList.add("reset-transform--delay");
-            },
-
-        },
-    })
-
-
-    const animationCompetenceSlash4 = document.querySelector(".gsap-competence-slash-4");
-    const animationCompetenceTitleContent4 = document.querySelector(".gsap-competence-title-content-4");
-    gsap.to(".gsap-competence-slash-4", {
-        scrollTrigger: {
-            trigger: ".gsap-competence-title-4",
-            start: "100% 80%",
-            markers: false,
-            onEnter: () => {
-                animationCompetenceSlash4.classList.add("reset-transform")
-            },
-        },
-    })
-
-    gsap.to(".gsap-competence-title-content-4", {
-        scrollTrigger: {
-            trigger: ".gsap-competence-title-4",
-            start: "100% 80%",
-            markers: false,
-            onEnter: () => {
-                animationCompetenceTitleContent4.classList.add("reset-transform--delay")
-            },
-
-        },
-    })
-
-
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            transform: "translateX(0)",
+            duration: 0.5,
+            delay: 0.5
+        })
+    });
 
     // WHITE MODE
     const whiteMode = gsap.utils.toArray(".white-mode")

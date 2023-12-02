@@ -197,27 +197,20 @@ body.white-mode--var {
   font-weight: 600;
   position: relative;
   overflow: hidden;
-  height: 32px;
   width: 300px;
   transition: var(--medium-transition);
 }
 
 .competence-slash {
-  position: absolute;
-  transform: translate(-8px, 26px);
-  background-color: var(--dark-gray);
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1);
-  z-index: 10;
+  transform: translateY(100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
 }
 
 .competence-title-content {
-  z-index: 9;
-  padding-left: 1rem;
-  position: absolute;
-  transform: translate(-100%, 0);
   min-width: max-content;
   word-wrap: normal;
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: translateX(-100%);
+  clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
 }
 
 .reset-transform {

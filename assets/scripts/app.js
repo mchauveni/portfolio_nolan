@@ -90,9 +90,12 @@ window.addEventListener("load", function () {
         })
     }
 
-    buttons_ripple.forEach(button => {
+    window.addEventListener('mousemove', moveCursor);
 
-        let btnInk = button.querySelector('.button-rippler');
+    /**
+     * BUTTON RIPPLE EFFECT
+     */
+    buttons_ripple.forEach(button => {
         let ripple = this.document.createElement('div');
         Object.assign(ripple.style, {
             mixBlendMode: "difference",
@@ -143,7 +146,4 @@ window.addEventListener("load", function () {
             });
         })
     });
-
-
-    window.addEventListener('mousemove', moveCursor);
 })
