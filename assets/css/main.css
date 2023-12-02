@@ -51,10 +51,6 @@ body {
   --gray: #343434;
   --light-gray: #BBBAD0;
 
-
-
-
-
   /* Transitions */
   --ultrafast-transition: all 0.1s cubic-bezier(0.25, 1, 0.5, 1);
   --fast-transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);

@@ -8,8 +8,10 @@ window.addEventListener("load", function () {
     const navbarMenuContent = document.querySelector(".navbar-menu-content");
 
 
+    /**
+     * SOUNDWAVE ANIMATION TOOGLE
+     */
     soundwaveContainer.style.height = menuButton.clientHeight + "px";
-
 
     soundwaveContainer.addEventListener("click", function () {
         soundwaveItem.forEach(element => {
@@ -19,6 +21,9 @@ window.addEventListener("load", function () {
     })
 
 
+    /**
+     * MENU BURGER
+     */
     menuButton.addEventListener("click", function () {
         burgerSpan[0].classList.toggle("burger-span1--active");
         burgerSpan[1].classList.toggle("burger-span2--active");
@@ -27,6 +32,11 @@ window.addEventListener("load", function () {
     })
 
     navbarMenuContent.style.top = navbar.clientHeight + "px";
+
+
+    /**
+     * COPY POPUP
+     */
 
     let copy = document.querySelectorAll(".copy");
     let copy_popup = document.querySelector(".copy-popup");
@@ -48,7 +58,4 @@ window.addEventListener("load", function () {
         copy_popup.style.top = e.clientY + 6 + "px";
 
     })
-
-
-
 })

@@ -1,6 +1,6 @@
 @import url(./main.css);
 
-body.white-mode--var{
+body.white-mode--var {
   --dark-gray: #dedee0 !important;
   --pure-black: #fff !important;
   --pure-white: #000 !important;
@@ -8,7 +8,7 @@ body.white-mode--var{
   transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.copy-popup{
+.copy-popup {
   position: fixed;
   background-color: var(--gray-600);
   color: var(--pure-black);
@@ -73,15 +73,15 @@ body.white-mode--var{
 /* hero arrow animation */
 @keyframes hero-arrow {
   0% {
-      transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
   }
 
   50% {
-      transform: translateX(-50%) translateY(0.5rem);
+    transform: translateX(-50%) translateY(0.5rem);
   }
 
   100% {
-      transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
   }
 }
 
@@ -183,15 +183,15 @@ body.white-mode--var{
   transition: var(--medium-transition);
 }
 
-.competence-slash{
+.competence-slash {
   position: absolute;
   transform: translate(-8px, 26px);
   background-color: var(--dark-gray);
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1);
   z-index: 10;
 }
 
-.competence-title-content{
+.competence-title-content {
   z-index: 9;
   padding-left: 1rem;
   position: absolute;
@@ -201,12 +201,12 @@ body.white-mode--var{
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.reset-transform{
+.reset-transform {
   transform: translate(0%, 0%) !important;
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   transition-delay: 0.2s;
 }
-.reset-transform--delay{
+
+.reset-transform--delay {
   transform: translate(0%, 0%) !important;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   transition-delay: 0.7s;
@@ -308,14 +308,15 @@ body.white-mode--var{
   transition: var(--fast-transition);
 }
 
-.contact-form-input--submit{
+.contact-form-input--submit {
   outline: none;
   background: none;
   color: var(--pure-white);
   cursor: pointer;
   transition: var(--medium-transition);
 }
-.contact-form-input--submit:hover{
+
+.contact-form-input--submit:hover {
   outline: none;
   background: none;
   color: var(--gray-500);
@@ -340,11 +341,11 @@ body.white-mode--var{
   cursor: pointer;
 }
 
-.social-item:hover .social-item--hover{
+.social-item:hover .social-item--hover {
   top: 0%;
 }
 
-.social-item--hover{
+.social-item--hover {
   position: absolute;
   left: 0;
   top: 100%;
@@ -355,10 +356,10 @@ body.white-mode--var{
   width: fit-content;
   background-color: var(--near-black);
   transition: var(--medium-transition);
-  
+
 }
 
-.social-item-content{
+.social-item-content {
   display: flex;
   align-items: center;
   animation: 3s slide infinite linear;
@@ -373,6 +374,7 @@ body.white-mode--var{
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -411,4 +413,3 @@ body.white-mode--var{
   align-items: center;
   gap: 1rem;
 }
-

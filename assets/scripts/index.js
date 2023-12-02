@@ -130,10 +130,9 @@ window.addEventListener("load", function () {
             onEnter: () => {
                 animationCompetenceSlash4.classList.add("reset-transform")
             },
-            
-
         },
     })
+
     gsap.to(".gsap-competence-title-content-4", {
         scrollTrigger: {
             trigger: ".gsap-competence-title-4",
@@ -152,35 +151,26 @@ window.addEventListener("load", function () {
     const whiteMode = gsap.utils.toArray(".white-mode")
     const body = document.querySelector("body");
 
-    whiteMode.forEach(element =>{
+    whiteMode.forEach(element => {
         gsap.to(element, {
             scrollTrigger: {
                 trigger: element,
                 start: "top 30%",
-                end:"bottom 30%",
+                end: "bottom 30%",
                 markers: false,
                 onEnter: () => { //Add white mode
                     body.classList.add("white-mode--var");
-
                 },
                 onEnterBack: () => { //Add white mode
                     body.classList.add("white-mode--var");
-                
                 },
                 onLeave: () => { //Add dark mode
                     body.classList.remove("white-mode--var");
                 },
                 onLeaveBack: () => { //Add dark mode
                     body.classList.remove("white-mode--var");
-        
                 }
             }
         })
     })
-
-
-    
-
-
-
 })
