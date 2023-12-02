@@ -58,4 +58,92 @@ window.addEventListener("load", function () {
         copy_popup.style.top = e.clientY + 6 + "px";
 
     })
+
+    /**
+     * CURSOR
+     */
+
+    const cursor = document.querySelector('.cursor');
+    let buttons_ripple = gsap.utils.toArray(".button-ripple-hover");
+
+    function moveCursor(e) {
+        requestAnimationFrame(() => {
+            TweenMax.to(cursor, 0.5, { x: (e.clientX - (cursor.offsetWidth / 2)), y: (e.clientY - (cursor.offsetHeight / 2)), duration: 0.05 })
+        })
+    }
+
+    function changeCursorSize(scale) {
+        requestAnimationFrame(() => {
+            TweenMax.to(cursor, 0.5, { scale: scale })
+        })
+    }
+
+    function resetCursorSize() {
+        requestAnimationFrame(() => {
+            TweenMax.to(cursor, 0.5, { scale: 1 })
+        })
+    }
+
+    function cursorText(text) {
+        requestAnimationFrame(() => {
+            cursor.innerText = text;
+        })
+    }
+
+    buttons_ripple.forEach(button => {
+
+        let btnInk = button.querySelector('.button-rippler');
+        let ripple = this.document.createElement('div');
+        Object.assign(ripple.style, {
+            mixBlendMode: "difference",
+            position: "absolute",
+            display: "block",
+            background: "#fff",
+            top: 0,
+            left: 0,
+            width: "0px",
+            height: "0px",
+            borderRadius: "100%",
+            transformOrigine: "center",
+            transform: "translate(-50%, -50%)",
+            pointerEvents: "none",
+        })
+
+        button.addEventListener('mouseenter', (e) => {
+            cursor.style.mixBlendMode = "normal";
+            changeCursorSize(0);
+
+            // Blinks ripple to the edge where mouse is
+            button.appendChild(ripple);
+            ripple.style.left = e.pageX - button.offsetLeft + "px";
+            ripple.style.top = e.pageY - button.offsetTop + "px";
+
+            // Animate ripple
+            gsap.to(ripple, 0.5, {
+                width: button.offsetWidth * 2.5,
+                height: button.offsetWidth * 2.5
+            });
+        })
+
+        button.addEventListener('mouseout', (e) => {
+            resetCursorSize();
+
+            // Blinks ripple to the edge where mouse is
+            ripple.style.left = e.pageX - button.offsetLeft + "px";
+            ripple.style.top = e.pageY - button.offsetTop + "px";
+
+            // Animate ripple
+            gsap.to(ripple, 0.5, {
+                width: 0,
+                height: 0,
+                onComplete() {
+                    cursor.style.mixBlendMode = "difference";
+                    ripple.remove();
+                }
+            });
+        })
+    });
+
+
+    window.addEventListener('mousemove', moveCursor);
 })

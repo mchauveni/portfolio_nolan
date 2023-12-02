@@ -20,6 +20,25 @@ body.white-mode--var {
   border-radius: 3px;
 }
 
+.cursor {
+  z-index: 1000000;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: fixed;
+  transform: scale(1);
+  transform-origin: center;
+  background-color: white;
+  mix-blend-mode: difference;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.button-ripple-hover {
+  overflow: hidden;
+  position: relative;
+}
+
 /* HERO */
 
 .hero {
