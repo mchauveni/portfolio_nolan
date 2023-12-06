@@ -111,13 +111,13 @@ window.addEventListener("load", function () {
             transform: "translate(-50%, -50%)",
             pointerEvents: "none",
         })
+        button.appendChild(ripple);
 
         button.addEventListener('mouseenter', (e) => {
             cursor.style.mixBlendMode = "normal";
             changeCursorSize(0);
 
             // Blinks ripple to the edge where mouse is
-            button.appendChild(ripple);
             ripple.style.left = e.pageX - button.offsetLeft + "px";
             ripple.style.top = e.pageY - button.offsetTop + "px";
 
@@ -141,7 +141,6 @@ window.addEventListener("load", function () {
                 height: 0,
                 onComplete() {
                     cursor.style.mixBlendMode = "difference";
-                    ripple.remove();
                 }
             });
         })

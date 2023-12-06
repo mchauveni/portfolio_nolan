@@ -40,10 +40,31 @@ window.addEventListener("load", function () {
     // ANIMATION ON SCROLL
     gsap.registerPlugin(ScrollTrigger);
 
-    // Competence title
-    const animationCompetenceSlash0 = document.querySelector(".gsap-competence-slash-0");
-    const animationCompetenceTitleContent0 = document.querySelector(".gsap-competence-title-content-0");
+    // PROJETS
+    const real_item = gsap.utils.toArray('.realisation-item');
 
+    real_item.forEach(real => {
+        gsap.to(real, {
+            scrollTrigger: {
+                trigger: real,
+                start: "top 60%",
+                onEnter: () => {
+                    real.classList.add('active');
+                },
+                onEnterBack: () => {
+                    real.classList.add('active');
+                },
+                onLeave: () => {
+                    real.classList.remove('active');
+                },
+                onLeaveBack: () => {
+                    real.classList.remove('active');
+                }
+            },
+        })
+    });
+
+    // COMPETENCE ITEM
     const competence_slash = gsap.utils.toArray('.competence-slash');
     const competence_title = gsap.utils.toArray('.competence-title-content');
 
@@ -52,9 +73,6 @@ window.addEventListener("load", function () {
             scrollTrigger: {
                 trigger: slash,
                 start: "100% 80%",
-                onEnter: () => {
-                    console.log("NOW");
-                },
             },
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
             transform: "translateY(0)",
@@ -67,9 +85,6 @@ window.addEventListener("load", function () {
             scrollTrigger: {
                 trigger: title,
                 start: "100% 80%",
-                onEnter: () => {
-                    console.log("NOW");
-                },
             },
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
             transform: "translateX(0)",
