@@ -145,4 +145,21 @@ window.addEventListener("load", function () {
             });
         })
     });
+
+    const cursorClick = document.querySelectorAll(".cursor-state-click");
+
+    cursorClick.forEach(element => 
+        element.addEventListener("mouseover", function () {
+            cursorText("Click") //Le texte ne marche pas
+            changeCursorSize(4)
+
+        })
+    )
+    cursorClick.forEach(element => 
+        element.addEventListener("mouseout", function () {
+            cursorText("")
+            resetCursorSize()
+
+        })
+    )
 })

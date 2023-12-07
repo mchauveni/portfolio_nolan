@@ -76,7 +76,7 @@ window.addEventListener("load", function () {
                 start: "100% 80%",
             },
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-            transform: "translateY(0)",
+            transform: "translate(0,0)",
             duration: 0.5
         })
     });
