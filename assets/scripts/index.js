@@ -48,6 +48,7 @@ window.addEventListener("load", function () {
             scrollTrigger: {
                 trigger: real,
                 start: "top 60%",
+                markers: false,
                 onEnter: () => {
                     real.classList.add('active');
                 },
