@@ -6,14 +6,35 @@ window.addEventListener("load", function () {
     const burgerSpan = document.querySelectorAll(".burger-span");
     const navbar = document.querySelector(".navbar");
     const navbarMenuContent = document.querySelector(".navbar-menu-content");
+    const music = document.querySelector(".website-music");
+    const content = document.querySelector(".main-content")
 
+    music.volume = 0.2;
 
     /**
      * SOUNDWAVE ANIMATION TOOGLE
      */
+    
     soundwaveContainer.style.height = menuButton.clientHeight + "px";
 
     soundwaveContainer.addEventListener("click", function () {
+        let date = new Date();
+
+        let hours = date.getHours()
+        let minutes = date.getMinutes()
+
+        if(music.paused){
+            if((hours == 9 && minutes>= 58) || (hours <= 10 && minutes <= 2)){
+                music.src = "assets/music/10h.mp3";
+                music.play();
+            }else{
+                music.src = "assets/music/ambiant-website.mp3";
+                music.play();
+            }
+        }else{
+            music.pause();
+        }
+        
         soundwaveItem.forEach(element => {
             element.classList.toggle("animation-paused");
             element.classList.toggle("soundwave--start");
@@ -30,6 +51,14 @@ window.addEventListener("load", function () {
 
         navbarMenuContent.classList.toggle("navbar-menu-content--active");
     })
+
+    content.addEventListener("click", function(){
+        burgerSpan[0].classList.remove("burger-span1--active");
+        burgerSpan[1].classList.remove("burger-span2--active");
+
+        navbarMenuContent.classList.remove("navbar-menu-content--active");
+    })
+
 
     navbarMenuContent.style.top = navbar.clientHeight + "px";
 

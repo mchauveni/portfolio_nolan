@@ -42,23 +42,37 @@ window.addEventListener("load", function () {
 
     // PROJETS
     const real_item = gsap.utils.toArray('.realisation-item');
+    const videos = document.querySelectorAll(".realisation-video");
+
+
+
+    
 
     real_item.forEach(real => {
         gsap.to(real, {
             scrollTrigger: {
                 trigger: real,
                 start: "top 60%",
+                end:"end, 40%",
                 markers: false,
                 onEnter: () => {
+                    videos[real.dataset.index].classList.toggle("visibility-off");
+                    videos[real.dataset.index].play();
                     real.classList.add('active');
                 },
                 onEnterBack: () => {
+                    videos[real.dataset.index].classList.toggle("visibility-off")
+                    videos[real.dataset.index].play();
                     real.classList.add('active');
                 },
                 onLeave: () => {
+                    videos[real.dataset.index].classList.toggle("visibility-off")
+                    videos[real.dataset.index].pause();
                     real.classList.remove('active');
                 },
                 onLeaveBack: () => {
+                    videos[real.dataset.index].classList.toggle("visibility-off")
+                    videos[real.dataset.index].pause();
                     real.classList.remove('active');
                 }
             },

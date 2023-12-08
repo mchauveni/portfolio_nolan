@@ -126,6 +126,7 @@ body {
 
 .visibility-off {
   opacity: 0 !important;
+  transition: var(--slow-transition);
 }
 
 .visibility-on {
@@ -240,8 +241,8 @@ body {
   height: 12px;
   background-color: #fff;
   border-radius: 100vmax;
-  animation: animationSoundWave 1.25s ease-in-out infinite running;
   transition: var(--medium-transition);
+  animation: animationSoundWave 1.25s ease-in-out infinite running;
 }
 
 .soundwave-wave:nth-child(1) {
@@ -434,7 +435,8 @@ body {
 
 .navbar-menu-link:hover {
   border-radius: 100vmax;
-  background: var(--light-gray, #BBBAD0);
+  color: var(--pure-white);
+  background: var(--dark-gray);
   transition: var(--fast-transition);
 }
 

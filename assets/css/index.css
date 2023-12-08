@@ -118,7 +118,7 @@ body.white-mode--var {
   flex-direction: column;
   align-items: center;
   gap: 4rem;
-  background: var(--dark-gray, #0D0D0D);
+  margin: 8rem 0;
 }
 
 .realisation-container {
@@ -173,6 +173,16 @@ body.white-mode--var {
 .realisation-item.active .realisation-tag-item {
   color: var(--pure-white);
   border: 1px solid var(--pure-white);
+}
+
+.realisation-video{
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: brightness(0.2);
 }
 
 
