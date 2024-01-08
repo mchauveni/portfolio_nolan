@@ -25,10 +25,10 @@ window.addEventListener("load", function () {
 
         if(music.paused){
             if((hours == 9 && minutes>= 58) || (hours <= 10 && minutes <= 2)){
-                music.src = "assets/music/10h.mp3";
+                music.src = "/assets/music/10h.mp3";
                 music.play();
             }else{
-                music.src = "assets/music/ambiant-website.mp3";
+                music.src = "/assets/music/ambiant-website.mp3";
                 music.play();
             }
         }else{
