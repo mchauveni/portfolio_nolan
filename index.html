@@ -28,7 +28,7 @@
 <body>
     <span class="copy-popup">Copié !</span>
     <div class="cursor"></div>
-    <a class="scrollToTop" href="#">
+    <a class="scrollToTop" href="#" aria-label="Scroll to the top of the page">
         <div class="scrollToTop__outerRing"></div>
         <div class="scrollToTop__innerCircle">
             <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@
     <!-- Header -->
     <header class="header">
         <nav class="navbar">
-            <a href="#hero" class="navbar-logo-container cursor-state-click">
+            <a href="#hero" class="navbar-logo-container cursor-state-click" aria-label="Logo">
                 <svg class="navbar-logo-svg" id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1024 1024">
                     <defs>
@@ -80,7 +80,7 @@
                     <a class="navbar-menu-link--active">Accueil <div class="navbar-menu--selector"></div></a>
                     <a class="navbar-menu-link cursor-state-click" href="#realisation">réalisations</a>
                     <a class="navbar-menu-link cursor-state-click" href="#competence">compétences</a>
-                    <a class="navbar-menu-link cursor-state-click" href="about.html">à propos</a>
+                    <a class="navbar-menu-link cursor-state-click" href="index.html#contact">Contact</a>
                 </div>
             </div>
         </nav>
@@ -89,13 +89,14 @@
     <!-- Main Content -->
     <main class="main-content">
         <section class="hero" id="hero">
-            <p class="hero__introtitle"><span>Portfolio</span> <span>\</span> <span>2023</span></p>
+            <p class="hero__introtitle"><span>Portfolio</span> <span>\</span> <span>2024</span></p>
             <div class="hero__titlewrapper">
-                <h1 class="hero__maintitle">Quis autem vel eum iure reprehenderit qui in ea</h1>
-                <p class="hero__subtitle">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam
-                    nihil </p>
+                <h1 class="hero__maintitle">Créateur d'expériences innovantes : UI/UX, Communication & Développement
+                </h1>
+                <p class="hero__subtitle">Oser l'innovation audacieuse, révolutionner par la créativité, redéfinir
+                    l'expérience pour éblouir constamment.</p>
             </div>
-            <a href="#realisation" class="scrollcta cursor-state-click">
+            <a href="#realisation" class="scrollcta cursor-state-click" aria-label="Scroll to the bottom of the section hero">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="scrollcta__icon">
                     <path
                         d="M10.7929 17.707C11.1834 18.0975 11.8164 18.0975 12.2069 17.707L21.7069 8.207C22.0974 7.8165 22.0974 7.1835 21.7069 6.793C21.3164 6.4025 20.6834 6.4025 20.2929 6.793L11.4999 15.586L2.70688 6.793C2.51138 6.5975 2.25588 6.5 1.99988 6.5C1.74388 6.5 1.48838 6.5975 1.29288 6.793C0.902379 7.1835 0.902379 7.8165 1.29288 8.207L10.7929 17.707Z" />
@@ -105,7 +106,8 @@
         <section class="section-realisation" id="realisation">
             <h2 class="h2-title">Projets sélectionnés</h2>
             <div class="realisation-container">
-                <div class="realisation-item cursor-state-click" data-index="0">
+                <a class="realisation-item cursor-state-click" data-index="0"
+                    href="./realisations-detail/divernet-detail.html">
                     <h3 class="realisation-title">Divernet</h3>
                     <div class="realisation-tag-container">
                         <div class="realisation-tag-item button-ripple-hover">Stratégie</div>
@@ -113,8 +115,9 @@
                         <div class="realisation-tag-item button-ripple-hover">Branding</div>
                         <div class="realisation-tag-item button-ripple-hover">+1</div>
                     </div>
-                </div>
-                <div class="realisation-item cursor-state-click" data-index="1">
+                </a>
+                <a class="realisation-item cursor-state-click" data-index="1"
+                    href="./realisations-detail/lumina-detail.html">
                     <h3 class="realisation-title">Lumina Studio</h3>
                     <div class="realisation-tag-container">
                         <div class="realisation-tag-item button-ripple-hover">Stratégie</div>
@@ -122,50 +125,121 @@
                         <div class="realisation-tag-item button-ripple-hover">Branding</div>
                         <div class="realisation-tag-item button-ripple-hover">+1</div>
                     </div>
-                </div>
-                <div class="realisation-item cursor-state-click" data-index="2">
+                </a>
+                <a class="realisation-item cursor-state-click" data-index="2"
+                    href="./realisations-detail/JPO-detail.html">
                     <h3 class="realisation-title">Gite la coulée douce</h3>
                     <div class="realisation-tag-container">
                         <div class="realisation-tag-item button-ripple-hover">UX & UI Design</div>
                         <div class="realisation-tag-item button-ripple-hover">Développement</div>
                         <div class="realisation-tag-item button-ripple-hover">Photographie</div>
                     </div>
-                </div>
-                <div class="realisation-item cursor-state-click" data-index="3">
+                </a>
+                <a class="realisation-item cursor-state-click" data-index="3"
+                    href="./realisations-detail/gleniscom-detail.html">
                     <h3 class="realisation-title">Glénis'com</h3>
                     <div class="realisation-tag-container">
                         <div class="realisation-tag-item button-ripple-hover">Audit</div>
                         <div class="realisation-tag-item button-ripple-hover">UX & UI Design</div>
                         <div class="realisation-tag-item button-ripple-hover">CMS</div>
                     </div>
-                </div>
-                <div class="realisation-item cursor-state-click" data-index="4">
+                </a>
+                <a class="realisation-item cursor-state-click" data-index="4"
+                    href="./realisations-detail/JPO-detail.html">
                     <h3 class="realisation-title">JPO IUT Angoulême</h3>
                     <div class="realisation-tag-container">
                         <div class="realisation-tag-item button-ripple-hover">Audit</div>
                         <div class="realisation-tag-item button-ripple-hover">Communication</div>
                         <div class="realisation-tag-item button-ripple-hover">Print</div>
                     </div>
-                </div>
+                </a>
             </div>
+            <video muted loop class="realisation-video visibility-off">
+                <source src="assets/videos/divernet.webm" type="video/webm">
+            </video>
+            <video muted loop class="realisation-video visibility-off">
+                <source src="assets/videos/lumina.webm" type="video/webm">
+            </video>
+            <video muted loop class="realisation-video visibility-off">
+                <source src="assets/videos/gite.webm" type="video/webm">
+            </video>
+            <video muted loop class="realisation-video visibility-off">
+                <source src="assets/videos/gleniscom.webm" type="video/webm">
+            </video>
+            <video muted loop class="realisation-video visibility-off">
+                <source src="assets/videos/jpo.webm" type="video/webm">
+            </video>
+        </section>
+        <section class="section-realisation--mobile" loading="lazy">
+            <h2 class="h2-title">Projets sélectionnés</h2>
+            <div class="realisation-container">
+                <a class="realisation-item cursor-state-click" data-index="0"
+                    href="./realisations-detail/divernet-detail.html">
+                    <h3 class="realisation-title">Divernet</h3>
+                    <video muted controls class="realisation-video--mobile">
+                        <source src="assets/videos/divernet.webm" type="video/webm">
+                    </video>
+                    <div class="realisation-tag-container">
+                        <div class="realisation-tag-item button-ripple-hover">Stratégie</div>
+                        <div class="realisation-tag-item button-ripple-hover">UI & UX Design</div>
+                        <div class="realisation-tag-item button-ripple-hover">Branding</div>
+                    </div>
+                    
+                </a>
+                <a class="realisation-item cursor-state-click" data-index="1"
+                    href="./realisations-detail/lumina-detail.html">
+                    <h3 class="realisation-title">Lumina Studio</h3>
+                    <video muted controls class="realisation-video--mobile">
+                        <source src="assets/videos/lumina.webm" type="video/webm">
+                    </video>
+                    <div class="realisation-tag-container">
+                        <div class="realisation-tag-item button-ripple-hover">Stratégie</div>
+                        <div class="realisation-tag-item button-ripple-hover">UI & UX Design</div>
+                        <div class="realisation-tag-item button-ripple-hover">Branding</div>
+                    </div>
+                </a>
+                <a class="realisation-item cursor-state-click" data-index="2"
+                    href="./realisations-detail/JPO-detail.html">
+                    <h3 class="realisation-title">Gite la coulée douce</h3>
+                    <video muted controls class="realisation-video--mobile">
+                        <source src="assets/videos/gite.webm" type="video/webm">
+                    </video>
+                    <div class="realisation-tag-container">
+                        <div class="realisation-tag-item button-ripple-hover">UX & UI Design</div>
+                        <div class="realisation-tag-item button-ripple-hover">Développement</div>
+                        <div class="realisation-tag-item button-ripple-hover">Photographie</div>
+                    </div>
+                </a>
+                <a class="realisation-item cursor-state-click" data-index="3"
+                    href="./realisations-detail/gleniscom-detail.html">
+                    <h3 class="realisation-title">Glénis'com</h3>
+                    <video muted controls class="realisation-video--mobile">
+                        <source src="assets/videos/gleniscom.webm" type="video/webm">
+                    </video>
+                    <div class="realisation-tag-container">
+                        <div class="realisation-tag-item button-ripple-hover">Audit</div>
+                        <div class="realisation-tag-item button-ripple-hover">UX & UI Design</div>
+                        <div class="realisation-tag-item button-ripple-hover">CMS</div>
+                    </div>
+                </a>
+                <a class="realisation-item cursor-state-click" data-index="4"
+                    href="./realisations-detail/JPO-detail.html">
+                    <h3 class="realisation-title">JPO IUT Angoulême</h3>
+                    <video muted controls class="realisation-video--mobile">
+                        <source src="assets/videos/jpo.webm" type="video/webm">
+                    </video>
+                    <div class="realisation-tag-container">
+                        <div class="realisation-tag-item button-ripple-hover">Audit</div>
+                        <div class="realisation-tag-item button-ripple-hover">Communication</div>
+                        <div class="realisation-tag-item button-ripple-hover">Print</div>
+                    </div>
+                </a>
+            </div>
+
         </section>
 
-        <video muted loop class="realisation-video visibility-off">
-            <source src="assets/videos/divernet.webm" type="video/webm">
-        </video>
-        <video muted loop class="realisation-video visibility-off">
-            <source src="assets/videos/lumina.webm" type="video/webm">
-        </video>
-        <video muted loop class="realisation-video visibility-off">
-            <source src="assets/videos/gite.webm" type="video/webm">
-        </video>
-        <video muted loop class="realisation-video visibility-off">
-            <source src="assets/videos/gleniscom.webm" type="video/webm">
-        </video>
-        <video muted loop class="realisation-video visibility-off">
-            <source src="assets/videos/jpo.webm" type="video/webm">
-        </video>
-        
+
+
 
         <section class="section-competence" id="competence">
             <h2 class="h2-title">Mes compétences</h2>
@@ -189,11 +263,11 @@
                         convivialité et l'utilité pour garantir des produits remarquables.
                     </p>
                 </div>
-                <img src="./assets/images/competences/interface.webp" alt="Interface UI" class="competence-image">
+                <img src="./assets/images/competences/interface.webp" alt="Interface UI" class="competence-image" loading="lazy">
             </div>
 
             <div class="competence-container white-mode">
-                <img src="./assets/images/competences/ux.webp" alt="Intercae UX" class="competence-image">
+                <img src="./assets/images/competences/ux.webp" alt="Intercae UX" class="competence-image" loading="lazy">
                 <div class="competence-content-container">
                     <h3 class="competence-title gsap-competence-title-1">
                         <span class="competence-slash gsap-competence-slash-1">/</span>
@@ -231,10 +305,10 @@
                     </p>
                 </div>
                 <img src="./assets/images/competences/communication.webp" alt="Image communication"
-                    class="competence-image">
+                    class="competence-image" loading="lazy">
             </div>
             <div class="competence-container white-mode">
-                <img src="./assets/images/competences/developer.webp" alt="Image developpeur" class="competence-image">
+                <img src="./assets/images/competences/developer.webp" alt="Image developpeur" class="competence-image" loading="lazy">
                 <div class="competence-content-container">
                     <h3 class="competence-title gsap-competence-title-3">
                         <span class="competence-slash gsap-competence-slash-3">/</span>
@@ -266,7 +340,7 @@
                     </p>
                 </div>
                 <img src="./assets/images/competences/gestion-de-projet.webp" alt="Image gestion de projet"
-                    class="competence-image">
+                    class="competence-image" loading="lazy">
             </div>
         </section>
 
@@ -417,9 +491,8 @@
                     </span>
                 </div>
             </div>
-            <a href="https://www.instagram.com/nolanluzet/" target="_blank"
-                class="social-item cursor-state-click">Instagram
-                <div class="social-item--hover">
+            <div class="social-item cursor-state-click">Instagram
+                <a href="https://www.instagram.com/nolanluzet/" target="_blank" class="social-item--hover">
 
                     <span class="social-item-content">
                         <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -509,11 +582,10 @@
                         </svg>
                         @nolanluzet
                     </span>
-                </div>
-            </a>
-            <a href="https://www.linkedin.com/in/nolan-luzet-581922203/" target="_blank"
-                class="social-item cursor-state-click">LinkedIn
-                <div class="social-item--hover">
+                </a>
+            </div>
+            <div class="social-item cursor-state-click">LinkedIn
+                <a href="https://www.linkedin.com/in/nolan-luzet-581922203/" target="_blank" class="social-item--hover">
 
                     <span class="social-item-content">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -614,12 +686,12 @@
 
                         @nolanluzet
                     </span>
-                </div>
-            </a>
+                </a>
+            </div>
 
-            <a href="./assets/images/CV Nolan.pdf" target="_blank" class="social-item cursor-state-click">Curriculum
+            <div class="social-item cursor-state-click">Curriculum
                 Vitae
-                <div class="social-item--hover">
+                <a href="./assets/images/CV Nolan.pdf" target="_blank" class="social-item--hover">
 
                     <span class="social-item-content">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -742,29 +814,29 @@
 
                         Mon CV
                     </span>
-                </div>
-            </a>
+                </a>
+            </div>
         </section>
         <footer class="section-footer">
-            <p class="footer-left-container">© 2023 Nolan Luzet, Tous droits réservés.</p>
+            <p class="footer-left-container">© 2024 Nolan Luzet, Tous droits réservés.</p>
             <div class="footer-right-container">
                 <a href="##" class="footer-link cursor-state-click">Mentions légales</a>
                 <div class="footer-social-container">
-                    <div class="footer-link copy cursor-state-click">
+                    <div class="footer-link copy cursor-state-click" aria-label="Mail">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M5 4C3.43 4 2.13977 5.21 2.00977 6.75L12 12.1445L21.9902 6.75C21.8602 5.21 20.57 4 19 4H5ZM2 8.44531V17C2 18.655 3.345 20 5 20H19C20.655 20 22 18.655 22 17V8.44531L12.3555 13.6602C12.2455 13.7202 12.125 13.75 12 13.75C11.875 13.75 11.7545 13.7202 11.6445 13.6602L2 8.44531Z"
                                 fill="#D0D0D2" />
                         </svg>
                     </div>
-                    <a href="##" class="footer-link cursor-state-click">
+                    <a href="##" class="footer-link cursor-state-click" aria-label="LinkedIn">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M18.25 3H5.75C4.234 3 3 4.234 3 5.75V18.25C3 19.766 4.234 21 5.75 21H18.25C19.766 21 21 19.766 21 18.25V5.75C21 4.234 19.766 3 18.25 3ZM9 17C9 17.2765 8.7765 17.5 8.5 17.5H7C6.7235 17.5 6.5 17.2765 6.5 17V10.5C6.5 10.2235 6.7235 10 7 10H8.5C8.7765 10 9 10.2235 9 10.5V17ZM7.75 9C7.0595 9 6.5 8.4405 6.5 7.75C6.5 7.0595 7.0595 6.5 7.75 6.5C8.4405 6.5 9 7.0595 9 7.75C9 8.4405 8.4405 9 7.75 9ZM17.5 17C17.5 17.2765 17.2765 17.5 17 17.5H15.5C15.2235 17.5 15 17.2765 15 17V13.25C15 12.5605 14.4395 12 13.75 12C13.0605 12 12.5 12.5605 12.5 13.25V17C12.5 17.2765 12.2765 17.5 12 17.5H10.5C10.2235 17.5 10 17.2765 10 17V10.5C10 10.2235 10.2235 10 10.5 10H12C12.2765 10 12.5 10.2235 12.5 10.5V10.7705C13.0315 10.293 13.731 10 14.5 10C16.1545 10 17.5 11.3455 17.5 13V17Z"
                                 fill="#D0D0D2" />
                         </svg>
                     </a>
-                    <a href="##" class="footer-link cursor-state-click">
+                    <a href="##" class="footer-link cursor-state-click" aria-label="Instagram">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M8.25 2.5C5.0795 2.5 2.5 5.0795 2.5 8.25V15.75C2.5 18.9205 5.0795 21.5 8.25 21.5H15.75C18.9205 21.5 21.5 18.9205 21.5 15.75V8.25C21.5 5.0795 18.9205 2.5 15.75 2.5H8.25ZM17 6C17.5525 6 18 6.4475 18 7C18 7.552 17.5525 8 17 8C16.4475 8 16 7.552 16 7C16 6.4475 16.4475 6 17 6ZM12 7C14.757 7 17 9.243 17 12C17 14.757 14.757 17 12 17C9.243 17 7 14.757 7 12C7 9.243 9.243 7 12 7ZM12 8.5C11.5404 8.5 11.0852 8.59053 10.6606 8.76642C10.236 8.94231 9.85013 9.20012 9.52513 9.52513C9.20012 9.85013 8.94231 10.236 8.76642 10.6606C8.59053 11.0852 8.5 11.5404 8.5 12C8.5 12.4596 8.59053 12.9148 8.76642 13.3394C8.94231 13.764 9.20012 14.1499 9.52513 14.4749C9.85013 14.7999 10.236 15.0577 10.6606 15.2336C11.0852 15.4095 11.5404 15.5 12 15.5C12.4596 15.5 12.9148 15.4095 13.3394 15.2336C13.764 15.0577 14.1499 14.7999 14.4749 14.4749C14.7999 14.1499 15.0577 13.764 15.2336 13.3394C15.4095 12.9148 15.5 12.4596 15.5 12C15.5 11.5404 15.4095 11.0852 15.2336 10.6606C15.0577 10.236 14.7999 9.85013 14.4749 9.52513C14.1499 9.20012 13.764 8.94231 13.3394 8.76642C12.9148 8.59053 12.4596 8.5 12 8.5Z"
@@ -793,7 +865,7 @@
     <script src="./assets/scripts/index.js" defer></script>
     <script src="https://unpkg.com/split-type" defer></script>
     <script src="./assets/scripts/splitText.js" defer></script>
-    
+
 </body>
 
 </html>
