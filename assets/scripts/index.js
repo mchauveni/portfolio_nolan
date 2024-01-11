@@ -2,6 +2,8 @@ window.addEventListener("load", function () {
     const input = document.querySelectorAll(".contact-form-input");
     const inputNumber = document.querySelectorAll(".contact-form-number");
 
+    let mm = gsap.matchMedia();
+
     input.forEach(element => {
         element.addEventListener("focus", function () {
             inputNumber[element.dataset.index].classList.add("contact-form-number--active");
@@ -38,6 +40,8 @@ window.addEventListener("load", function () {
 
 
     // ANIMATION ON SCROLL
+
+
     gsap.registerPlugin(ScrollTrigger);
 
     // PROJETS
@@ -46,37 +50,38 @@ window.addEventListener("load", function () {
 
 
 
-    
 
-    real_item.forEach(real => {
-        gsap.to(real, {
-            scrollTrigger: {
-                trigger: real,
-                start: "top 60%",
-                end:"end, 40%",
-                markers: false,
-                onEnter: () => {
-                    videos[real.dataset.index].classList.toggle("visibility-off");
-                    videos[real.dataset.index].play();
-                    real.classList.add('active');
+    mm.add("(min-width: 1024px)", () => {
+        real_item.forEach(real => {
+            gsap.to(real, {
+                scrollTrigger: {
+                    trigger: real,
+                    start: "top 60%",
+                    end: "end, 40%",
+                    markers: false,
+                    onEnter: () => {
+                        videos[real.dataset.index].classList.toggle("visibility-off");
+                        videos[real.dataset.index].play();
+                        real.classList.add('active');
+                    },
+                    onEnterBack: () => {
+                        videos[real.dataset.index].classList.toggle("visibility-off")
+                        videos[real.dataset.index].play();
+                        real.classList.add('active');
+                    },
+                    onLeave: () => {
+                        videos[real.dataset.index].classList.toggle("visibility-off")
+                        videos[real.dataset.index].pause();
+                        real.classList.remove('active');
+                    },
+                    onLeaveBack: () => {
+                        videos[real.dataset.index].classList.toggle("visibility-off")
+                        videos[real.dataset.index].pause();
+                        real.classList.remove('active');
+                    }
                 },
-                onEnterBack: () => {
-                    videos[real.dataset.index].classList.toggle("visibility-off")
-                    videos[real.dataset.index].play();
-                    real.classList.add('active');
-                },
-                onLeave: () => {
-                    videos[real.dataset.index].classList.toggle("visibility-off")
-                    videos[real.dataset.index].pause();
-                    real.classList.remove('active');
-                },
-                onLeaveBack: () => {
-                    videos[real.dataset.index].classList.toggle("visibility-off")
-                    videos[real.dataset.index].pause();
-                    real.classList.remove('active');
-                }
-            },
-        })
+            })
+        });
     });
 
     // COMPETENCE ITEM
@@ -112,26 +117,29 @@ window.addEventListener("load", function () {
     const whiteMode = gsap.utils.toArray(".white-mode")
     const body = document.querySelector("body");
 
-    whiteMode.forEach(element => {
-        gsap.to(element, {
-            scrollTrigger: {
-                trigger: element,
-                start: "top 30%",
-                end: "bottom 30%",
-                markers: false,
-                onEnter: () => { //Add white mode
-                    body.classList.add("white-mode--var");
-                },
-                onEnterBack: () => { //Add white mode
-                    body.classList.add("white-mode--var");
-                },
-                onLeave: () => { //Add dark mode
-                    body.classList.remove("white-mode--var");
-                },
-                onLeaveBack: () => { //Add dark mode
-                    body.classList.remove("white-mode--var");
+    mm.add("(min-width: 1024px)", () => {
+
+        whiteMode.forEach(element => {
+            gsap.to(element, {
+                scrollTrigger: {
+                    trigger: element,
+                    start: "top 30%",
+                    end: "bottom 30%",
+                    markers: false,
+                    onEnter: () => { //Add white mode
+                        body.classList.add("white-mode--var");
+                    },
+                    onEnterBack: () => { //Add white mode
+                        body.classList.add("white-mode--var");
+                    },
+                    onLeave: () => { //Add dark mode
+                        body.classList.remove("white-mode--var");
+                    },
+                    onLeaveBack: () => { //Add dark mode
+                        body.classList.remove("white-mode--var");
+                    }
                 }
-            }
+            })
         })
     })
 })

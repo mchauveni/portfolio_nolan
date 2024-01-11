@@ -348,7 +348,11 @@ body.white-mode--var {
 }
 
 @media screen and (max-width: 1024px) {
-  .hero.section-realisation.section-competence.section-contact {
+
+  .hero,
+  .section-realisation,
+  .section-competence,
+  .section-contact {
     padding: 4rem 4rem;
   }
 }
@@ -402,17 +406,29 @@ body.white-mode--var {
   }
 
   .realisation-item {
+    padding: 0rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
   }
+
   .realisation-item .realisation-tag-item {
     font-size: 0.75rem;
+    color: var(--pure-white);
+    border-color: var(--pure-white);
   }
-  .realisation-video--mobile{
+
+  .realisation-video--mobile {
     width: calc(100vw - 4rem);
+  }
+
+  .realisation-item .realisation-title {
+    color: var(--pure-white);
+    font-size: 2rem;
+    text-align: center;
+    flex: 1;
   }
 
   /* COMPETENCES */
@@ -421,7 +437,7 @@ body.white-mode--var {
     padding: 4rem 0;
     gap: 4rem;
   }
-  
+
   .competence-container {
     display: flex;
     flex-direction: column;
@@ -431,7 +447,7 @@ body.white-mode--var {
     align-self: stretch;
     padding: 0rem;
   }
-  
+
   .competence-content-container {
     display: flex;
     flex-direction: column;
