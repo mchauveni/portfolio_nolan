@@ -48,41 +48,18 @@ window.addEventListener("load", function () {
     const real_item = gsap.utils.toArray('.realisation-item');
     const videos = document.querySelectorAll(".realisation-video");
 
-
-
-
-    mm.add("(min-width: 1024px)", () => {
-        real_item.forEach(real => {
-            gsap.to(real, {
-                scrollTrigger: {
-                    trigger: real,
-                    start: "top 60%",
-                    end: "end, 40%",
-                    markers: false,
-                    onEnter: () => {
-                        videos[real.dataset.index].classList.toggle("visibility-off");
-                        videos[real.dataset.index].play();
-                        real.classList.add('active');
-                    },
-                    onEnterBack: () => {
-                        videos[real.dataset.index].classList.toggle("visibility-off")
-                        videos[real.dataset.index].play();
-                        real.classList.add('active');
-                    },
-                    onLeave: () => {
-                        videos[real.dataset.index].classList.toggle("visibility-off")
-                        videos[real.dataset.index].pause();
-                        real.classList.remove('active');
-                    },
-                    onLeaveBack: () => {
-                        videos[real.dataset.index].classList.toggle("visibility-off")
-                        videos[real.dataset.index].pause();
-                        real.classList.remove('active');
-                    }
-                },
-            })
-        });
-    });
+    real_item.forEach(element => {
+        element.addEventListener("mouseenter", function () {
+            videos[element.dataset.index].classList.remove("visibility-off")
+            videos[element.dataset.index].play();
+            element.classList.add('active');
+        })
+        element.addEventListener("mouseleave", function () {
+            videos[element.dataset.index].classList.add("visibility-off")
+            videos[element.dataset.index].pause();
+            element.classList.remove('active');
+        })
+    })
 
     // COMPETENCE ITEM
     const competence_slash = gsap.utils.toArray('.competence-slash');

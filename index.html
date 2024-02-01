@@ -102,6 +102,9 @@
                         d="M10.7929 17.707C11.1834 18.0975 11.8164 18.0975 12.2069 17.707L21.7069 8.207C22.0974 7.8165 22.0974 7.1835 21.7069 6.793C21.3164 6.4025 20.6834 6.4025 20.2929 6.793L11.4999 15.586L2.70688 6.793C2.51138 6.5975 2.25588 6.5 1.99988 6.5C1.74388 6.5 1.48838 6.5975 1.29288 6.793C0.902379 7.1835 0.902379 7.8165 1.29288 8.207L10.7929 17.707Z" />
                 </svg>
             </a>
+            <video muted loop autoplay class="hero-video">
+                <source src="assets/videos/Hero.mp4" type="video/webm">
+            </video>
         </section>
         <section class="section-realisation" id="realisation">
             <h2 class="h2-title">Projets sélectionnés</h2>
@@ -155,19 +158,19 @@
                 </a>
             </div>
             <video muted loop class="realisation-video visibility-off">
-                <source src="assets/videos/divernet.webm" type="video/webm">
+                <source src="assets/videos/divernet.mp4" type="video/webm">
             </video>
             <video muted loop class="realisation-video visibility-off">
-                <source src="assets/videos/lumina.webm" type="video/webm">
+                <source src="assets/videos/lumina.mp4" type="video/webm">
             </video>
             <video muted loop class="realisation-video visibility-off">
-                <source src="assets/videos/gite.webm" type="video/webm">
+                <source src="assets/videos/gite.mp4" type="video/webm">
             </video>
             <video muted loop class="realisation-video visibility-off">
-                <source src="assets/videos/gleniscom.webm" type="video/webm">
+                <source src="assets/videos/gleniscom.mp4" type="video/webm">
             </video>
             <video muted loop class="realisation-video visibility-off">
-                <source src="assets/videos/jpo.webm" type="video/webm">
+                <source src="assets/videos/jpo.mp4" type="video/webm">
             </video>
         </section>
         <section class="section-realisation--mobile">
@@ -177,7 +180,7 @@
                     href="./realisations-detail/divernet-detail.html">
                     <h3 class="realisation-title">Divernet</h3>
                     <video muted controls class="realisation-video--mobile">
-                        <source src="assets/videos/divernet.webm" type="video/webm">
+                        <source src="assets/videos/divernet.mp4" type="video/webm">
                     </video>
                     <div class="realisation-tag-container">
                         <div class="realisation-tag-item button-ripple-hover">Stratégie</div>
@@ -190,7 +193,7 @@
                     href="./realisations-detail/lumina-detail.html">
                     <h3 class="realisation-title">Lumina Studio</h3>
                     <video muted controls class="realisation-video--mobile">
-                        <source src="assets/videos/lumina.webm" type="video/webm">
+                        <source src="assets/videos/lumina.mp4" type="video/webm">
                     </video>
                     <div class="realisation-tag-container">
                         <div class="realisation-tag-item button-ripple-hover">Stratégie</div>
@@ -202,7 +205,7 @@
                     href="./realisations-detail/JPO-detail.html">
                     <h3 class="realisation-title">Gite la coulée douce</h3>
                     <video muted controls class="realisation-video--mobile">
-                        <source src="assets/videos/gite.webm" type="video/webm">
+                        <source src="assets/videos/gite.mp4" type="video/webm">
                     </video>
                     <div class="realisation-tag-container">
                         <div class="realisation-tag-item button-ripple-hover">UX & UI Design</div>
@@ -214,7 +217,7 @@
                     href="./realisations-detail/gleniscom-detail.html">
                     <h3 class="realisation-title">Glénis'com</h3>
                     <video muted controls class="realisation-video--mobile">
-                        <source src="assets/videos/gleniscom.webm" type="video/webm">
+                        <source src="assets/videos/gleniscom.mp4" type="video/webm">
                     </video>
                     <div class="realisation-tag-container">
                         <div class="realisation-tag-item button-ripple-hover">Audit</div>
@@ -226,7 +229,7 @@
                     href="./realisations-detail/JPO-detail.html">
                     <h3 class="realisation-title">JPO IUT Angoulême</h3>
                     <video muted controls class="realisation-video--mobile">
-                        <source src="assets/videos/jpo.webm" type="video/webm">
+                        <source src="assets/videos/jpo.mp4" type="video/webm">
                     </video>
                     <div class="realisation-tag-container">
                         <div class="realisation-tag-item button-ripple-hover">Audit</div>
@@ -277,7 +280,7 @@
                     <p class="competence-text" id="ux-text">
                         Mon approche du design d'expérience repose sur une exploration approfondie des besoins des
                         utilisateurs. <br><br>
-                        À travers des recherches rigoureuses, des prototypes itératifs, et une
+                        À travers des recherches rigoureuses, des prototypes itératifs et une
                         analyse
                         approfondie, je m'engage à créer des expériences qui vont au-delà de la simple navigation.
                         <br><br>
@@ -369,7 +372,7 @@
                     <div class="contact-form-input-container cursor-state-click">
                         <label for="message" class="contact-form-label">Quel est votre message ?</label>
                         <textarea data-index="2" name="message" id="message" rows="6" class="contact-form-input"
-                            placeholder="Bonjour, je souhaiterai..." required></textarea>
+                            placeholder="Bonjour, je souhaiterais..." required></textarea>
                     </div>
                 </div>
                 <input type="submit" class="h2-title contact-form-input--submit cursor-state-click" value="Envoyer">
@@ -853,6 +856,20 @@
 
     <audio class="website-music" loop src="assets/music/ambiant-website.mp3" type="audio/mp3">
     </audio>
+
+    <script>
+        // Using DOMContentLoaded event
+        document.addEventListener('DOMContentLoaded', function() {
+            // Your code to execute after the DOM has fully loaded
+            console.log('DOM content has loaded' + hours);
+        });
+    
+        // Using load event
+        window.addEventListener('load', function() {
+            // Your code to execute after all assets (images, styles, etc.) have fully loaded
+            console.log('Page has completely loaded');
+        });
+    </script>
 
 
 

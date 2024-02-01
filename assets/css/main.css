@@ -616,9 +616,24 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  
-  .cursor{
+
+  .cursor {
     display: none;
+  }
+
+  /* Scroll to top button */
+  .scrollToTop {
+    right: 2rem;
+  }
+
+  .scrollToTop .scrollToTop__innerCircle {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .scrollToTop .scrollToTop__arrowTop {
+    transform: translateY(0%);
+    opacity: 1;
   }
 
   .navbar,
