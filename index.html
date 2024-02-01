@@ -25,9 +25,20 @@
     <link rel="icon" sizes="16x16 32x32 64x64" href="./assets/images/favicon.ico" />
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/loader.css" />
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="./assets/scripts/loader.js"></script>
+    <script src="./assets/scripts/app.js" defer></script>
+    <script src="https://unpkg.com/split-type" defer></script>
+    <script src="./assets/scripts/splitText.js" defer></script>
+    <script src="./assets/scripts/index.js" defer></script>
 </head>
 
-<body data-barba="wrapper">
+<body>
     <span class="copy-popup">Copié !</span>
     <div class="cursor"></div>
     <a class="scrollToTop" href="#" aria-label="Scroll to the top of the page">
@@ -43,7 +54,7 @@
     <!-- Header -->
     <header class="header">
         <nav class="navbar">
-            <a href="#hero" class="navbar-logo-container cursor-state-click" aria-label="Logo">
+            <a href="/index.html" class="navbar-logo-container cursor-state-click" aria-label="Logo">
                 <svg class="navbar-logo-svg" id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1024 1024">
                     <defs>
@@ -89,7 +100,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="main-content" data-barba="container" data-barba-namespace="home">
+    <main class="main-content">
         <section class="hero" id="hero">
             <p class="hero__introtitle"><span>Portfolio</span> <span>\</span> <span>2024</span></p>
             <div class="hero__titlewrapper">
@@ -854,24 +865,25 @@
             </div>
         </div>
     </footer>
+    <div class="loader-section">
+        <div class="box-container">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+        </div>
+        <div class="progress-bar-wrapper">
+            <div class="progress-bar-container">
+                <div class="progress-bar--fill"></div>
+            </div>
+            <p class="progress-bar-counter"><span class="js-counter-value">0</span> %</p>
+        </div>
+    </div>
 
     <audio class="website-music" loop src="assets/music/ambiant-website.mp3" type="audio/mp3">
     </audio>
 
 
 
-
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/@barba/core"></script>
-
-    <script src="./assets/scripts/barba.js"></script>
-    <script src="./assets/scripts/app.js" defer></script>
-    <script src="./assets/scripts/index.js" defer></script>
-    <script src="https://unpkg.com/split-type" defer></script>
-    <script src="./assets/scripts/splitText.js" defer></script>
 
 </body>
 
