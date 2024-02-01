@@ -1,6 +1,8 @@
 /* CSS MAIN v05-2023  */
 /* CSS RESET */
 @import url(./reset.css);
+@import url(./index.css);
+@import url(./réalisation-detail.css);
 
 /* IMPORT FONTS AND CSS */
 @import url(../fonts/GeneralSans/Fonts/WEB/css/general-sans.css);
