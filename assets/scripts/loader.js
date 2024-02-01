@@ -36,7 +36,7 @@ window.addEventListener("DOMContentLoaded", function () {
                 loader.style = "display:none;"
             }, 3500);
            
-        }, 2000);
+        }, 500);
     };
 })
 
